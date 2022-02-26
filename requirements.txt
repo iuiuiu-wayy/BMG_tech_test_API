@@ -1,0 +1,9 @@
+Flask
+psycopg2-binary
+Flask-SQLAlchemy
+gevent
+celery
+redis
+PyJWT
+Flask-RESTful
+requests

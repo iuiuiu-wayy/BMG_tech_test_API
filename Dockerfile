@@ -1,4 +1,6 @@
 FROM python:3.8-alpine
+ENV PYTHONUNBUFFERED=1
+
 
 WORKDIR /BMG_app
 
@@ -8,4 +10,4 @@ RUN pip install -r requirements.txt
 COPY . .
 EXPOSE 5000
 
-CMD ["python", "run.py",  "--host=0.0.0.0"]
+CMD ["python", "-u", "run.py",  "--host=0.0.0.0"]

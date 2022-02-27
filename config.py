@@ -1,5 +1,5 @@
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@db:5432/postgres' # 'postgresql://postgres:project@localhost/JubliaDB'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@postgresdb:5432/postgres' # 'postgresql://postgres:project@localhost/JubliaDB'
     SQLALCHEMY_ECHO = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = '8382a02149664e938d2d9eaa58dfe3f3'

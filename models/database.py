@@ -1,4 +1,4 @@
-from . import db
+from models import db
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, Integer, String, DateTime, Sequence, ForeignKey, UnicodeText
 from sqlalchemy.orm import sessionmaker

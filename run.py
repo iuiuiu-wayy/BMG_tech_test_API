@@ -35,7 +35,8 @@ def token_required(func):
         expiration = datetime.strptime(data['expiration'], "%Y-%m-%d %H:%M:%S.%f")
         if expiration < datetime.now():
             return jsonify({'Message': 'Token expired'}), 403
-        return func(*args, **kwargs)
+        username = data['username']
+        return func(username, *args, **kwargs)
     return decorated
 
 
@@ -104,7 +105,8 @@ def login():
 ### user edit name, or email
 @app.route('/edit_data', methods=['POST'])
 @token_required
-def edit_data():
+def edit_data(username):
+    print('username ', username)
     param = request.form.get('param_changed')
     new_data = request.form.get(param)
     referral_code = request.form.get('referral_code')
